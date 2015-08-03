@@ -1,20 +1,25 @@
 <script type="text/javascript">
-// var question = prompt('What is your name?');
 var guess, answer, message;
 
-//Generate random number b/w 1 and 100
-answer = Math.floor(Math.random()*100+1)
-console.log(answer);
 
-guess = prompt('I\'m thinking of a number bewteen 1 and 100...what is it')
+guess = ['How many dogs do I have?', 'Is my dog 5 or 11?', 'Is my dog a pure bred? Y/N', 'Is her favorite toy a bone? Y/N']
+answer = [1, 11, "N", "N"]
 
-if (guess == answer) {
-  message = 'Are you a wizard? You got it right!'
+for (var i = 0; i < guess.length; i++) {
+  var response = prompt(guess[i]);
+  console.log('The user said ' + response);
+  console.log('The right answer ' + answer[i]);
+  if (response == answer[i]) {
+    console.log("correct")
+    message = "Yes! That's correct! You seem to know Finn.";
+  }
+  else {
+    console.log("incorrect")
+    message = "Nope.  You don't know that about Finn. Spend more time with her.";
+  }
+  alert(message);
+  console.log(i)
+
 }
-else {
-  message = 'oh well, you only had a 1% chance anyway. Don\'t cry'
-}
-
-alert(message);
 
 </script>
