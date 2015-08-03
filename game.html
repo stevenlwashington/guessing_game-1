@@ -1,0 +1,20 @@
+<script type="text/javascript">
+// var question = prompt('What is your name?');
+var guess, answer, message;
+
+//Generate random number b/w 1 and 100
+answer = Math.floor(Math.random()*100+1)
+console.log(answer);
+
+guess = prompt('I\'m thinking of a number bewteen 1 and 100...what is it')
+
+if (guess == answer) {
+  message = 'Are you a wizard? You got it right!'
+}
+else {
+  message = 'oh well, you only had a 1% chance anyway. Don\'t cry'
+}
+
+alert(message);
+
+</script>
