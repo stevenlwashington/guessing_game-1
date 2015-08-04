@@ -1,24 +1,24 @@
 <script type="text/javascript">
 var guess, answer, message;
 
-
-guess = ['How many dogs do I have?', 'Is my dog 5 or 11?', 'Is my dog a pure bred? Y/N', 'Is her favorite toy a bone? Y/N']
-answer = [1, 11, "N", "N"]
+//square brackets refer to the index
+guess = ['How many dogs do I have?', 'Is my dog 5 or 11?', 'Is my dog a pure bred? Y/N', 'Is Finn\'s favorite toy a bone? Y/N', 'Is Finn a boy or a girl?'];
+answer = [1, 11, "N", "N", "GIRL"];
 
 for (var i = 0; i < guess.length; i++) {
   var response = prompt(guess[i]);
+  var response = response.toUpperCase();
   console.log('The user said ' + response);
   console.log('The right answer ' + answer[i]);
   if (response == answer[i]) {
-    console.log("correct")
+    console.log("correct");
     message = "Yes! That's correct! You seem to know Finn.";
-  }
-  else {
-    console.log("incorrect")
+  } else {
+    console.log("incorrect");
     message = "Nope.  You don't know that about Finn. Spend more time with her.";
   }
   alert(message);
-  console.log(i)
+  console.log(i);
 
 }
 
